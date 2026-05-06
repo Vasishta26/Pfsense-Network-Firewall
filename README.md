@@ -1,1 +1,5 @@
 # Pfsense-Network-Firewall
+
+This project demonstrates the setup of a virtualised cybersecurity home lab using Oracle VirtualBox, consisting of three virtual machines: pfSense (firewall), Kali Linux (attacker), and CSI Linux (victim). The lab simulates a real-world network with pfSense acting as the edge firewall, separating the attacker and victim into isolated network segments. pfSense was configured with NAT, DHCP scopes, and multi-interface routing to replicate a realistic enterprise-style network environment.
+
+The lab showcases a full attack and defence cycle — a Denial of Service (DoS) attack was launched from Kali Linux using hping3, generating ICMP and SYN flood traffic targeting the CSI Linux victim machine. The attack was monitored in real time using Wireshark, confirming successful flood traffic reaching the victim. A firewall block rule was then applied on pfSense to mitigate the attack, immediately halting all malicious traffic. Firewall logs were reviewed to verify the blocked packets, demonstrating how network-level defences can effectively stop DoS attacks.
